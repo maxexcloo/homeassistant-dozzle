@@ -6,6 +6,52 @@ A copy also lives at the repository root: [`CHANGELOG.md`](../CHANGELOG.md).
 
 ---
 
+## 0.3.15 - 2026-09-09
+
+- **Dozzle binary:** upgraded from `v10.8.0` → `v10.10.0` (upstream release).
+  <!-- auto-genere depuis les notes de release GitHub (v10.10.0), a relire/nettoyer -->
+  - **Features:**
+    - **icons**:
+      - Bundle rspamd app icon
+      - Bundle powerdns app icon
+      - Add icons for more services
+      - Bundle web framework app icons
+    - **logs**:
+      - Add download JSON button to log details
+    - **notifications**:
+      - Rebuild the alert and destination workflows
+    - **ui**:
+      - Dev.dozzle.url label to link a container to its own web UI
+      - Suggest dev.dozzle.url from traefik router labels
+      - Pro badge, icon button animations, splitpanes nav fixes
+      - Show link hint on the dashboard too
+      - Make the same-name container dropdown readable
+  - **Bug Fixes:**
+    - **deps**:
+      - Update all non-major dependencies
+      - Update all non-major dependencies
+    - **docker**:
+      - Skip pnpm version switch during offline install
+    - **events**:
+      - Stop containers from getting stuck after a restart
+    - **notifications**:
+      - Polish the alert and destination cards
+    - **ui**:
+      - Stop truncating container names that fit
+      - Unwrap the link hint popover and unify the mono font
+      - Tint the notification bell with the log level
+      - Stop the alert form from jumping while previews load
+    - **web**:
+      - Link every stylesheet the entry chunk depends on
+  - **Performance:**
+    - Cut first-load cost and precompress assets at build time
+    - **ui**:
+      - Prefetch route chunks once the app is idle
+      - Stop refetching dispatchers per alert card
+      - Stop duplicating the cloud config and status requests
+
+---
+
 ## 0.3.14 - 2026-08-31
 
 - **Dozzle binary:** upgraded from `v10.7.5` → `v10.8.0` (upstream release).
