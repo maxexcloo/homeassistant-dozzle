@@ -6,6 +6,40 @@ A copy also lives at the repository root: [`CHANGELOG.md`](../CHANGELOG.md).
 
 ---
 
+## 0.3.16 - 2026-09-12
+
+- **Dozzle binary:** upgraded from `v10.10.0` → `v11.0.1` (upstream release).
+  <!-- auto-genere depuis les notes de release GitHub (v11.0.1), a relire/nettoyer -->
+  - **Features:**
+    - Add rustfs icon
+    - **dev**: Let several worktrees run the dev server at once
+    - **icons**: Add icons for more services
+  - **Bug Fixes:**
+    - **auth**:
+      - Reject sha256 hashes at startup
+    - **cloud**:
+      - Stop long alert headlines spilling out of the popover
+      - Scope the rail&#39;s alert dot, and forget alerts when unlinked
+    - **deps**:
+      - Update all non-major dependencies
+    - **events**:
+      - Stop a dead SSE client from wedging container events
+    - **hosts**:
+      - Reconcile agent ids when the events stream connects
+    - **podman**:
+      - Derive a stable host id instead of trusting /info
+    - **ui**:
+      - Redesign the log search surfaces
+      - Make copy work over http, and say so when it cannot
+      - Give host cards one shape regardless of hostname
+      - Keep the stream up while a regex is half typed
+      - Move log severity off the row and onto the rail
+      - Keep toasts clear of the rail, hide the activity tab until cloud is linked
+    - **web**:
+      - Remove data race on the releases cache
+
+---
+
 ## 0.3.15 - 2026-09-09
 
 - **Dozzle binary:** upgraded from `v10.8.0` → `v10.10.0` (upstream release).
